@@ -1,0 +1,12 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  call-reusable:
+    uses: wxzed/action/.github/workflows/ci.yml@main
+    secrets: inherit
+
+
