@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     branches:
-      - "**"   # 监听所有分支，避免分支名不匹配导致不触发
+      - "main"   # 监听所有分支，避免分支名不匹配导致不触发
   pull_request:
   workflow_dispatch:  # 允许在 Actions 页面手动触发
 
