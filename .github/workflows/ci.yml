@@ -8,7 +8,7 @@ on:
 
 jobs:
   call-reusable:
-    uses: wxzed/action/.github/workflows/ci.yml@main
+    uses: wxzed/cloud-code-checks/.github/workflows/ci.yml@main
     secrets: inherit
 
 
