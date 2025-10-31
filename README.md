@@ -1,7 +1,7 @@
 # DFRobot_HumanDetection
 
 * [中文版本](./README_CN.md)
-  
+
   This is a driver library for human millimeter-wave detection, capable of detecting respiratory sleep and fall detection functions.
   The respiratory sleep function is based on millimeter-wave radar technology to perceive human biological presence and movement, continuously recording human presence. It real-time judges the sleep status and respiratory heart rate of the target based on changes in body movement amplitude and respiratory rate during sleep. After a sleep period ends, it outputs a sleep score and integrates with health applications based on relevant sleep parameters.
   Fall detection function uses algorithmic judgment based on personnel posture parameters to detect the fall status of the target through changes in speed, distance, posture, and other movements. It continuously monitors whether the target is at risk of falling and responds to prolonged abnormal stationary states with static residence alarms.
@@ -38,7 +38,7 @@ Before using this library, download the library files and paste them into the \A
     */
     uint8_t begin(void);
 
-    /** 
+    /**
      * @fn configWorkMode
      * @brief Initialize mode
      * @param mode Mode selection
@@ -192,7 +192,7 @@ Before using this library, download the library files and paste them into the \A
      * @brief Get human-related data in fall mode
     */
     uint16_t dmHumanData(eDmHuman dh);
-    
+
     /**
      * @fn track
      * @brief Track point query
@@ -237,7 +237,7 @@ Before using this library, download the library files and paste them into the \A
     */
     uint32_t staticResidencyTime(void);
 
-    
+
     /**
      * @fn accumulatedHeightDuration
      * @brief Accumulated height duration query
@@ -273,7 +273,7 @@ Before using this library, download the library files and paste them into the \A
      * @return Configuration status
      * @retval 0 Success
      * @retval 1 Failed
-     * 
+     *
     */
     uint8_t dmFallConfig(eDmFallConfig con, uint32_t data);
 
@@ -283,9 +283,9 @@ Before using this library, download the library files and paste them into the \A
 
 MCU                | Work Well    | Work Wrong   | Untested    | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-Mega2560           |      √       |              |             | 
-Leonardo           |      √       |              |             | 
-ESP32              |      √       |              |             | 
+Mega2560           |      √       |              |             |
+Leonardo           |      √       |              |             |
+ESP32              |      √       |              |             |
 
 ## Version
 
@@ -294,8 +294,3 @@ ESP32              |      √       |              |             |
 ## Creator
 
 Written by TangJie (jie.tang@dfrobot.com), 2019. (Welcome to our [website](https://www.dfrobot.com/))
-
-
-
-
-

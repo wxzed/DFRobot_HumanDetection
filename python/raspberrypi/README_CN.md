@@ -12,7 +12,7 @@ DFRobot_HumanDetection
 ## 产品链接（https://www.dfrobot.com.cn/goods-3965.html）
 
     SKU: SEN0623
-  
+
 ## 目录
 
   * [概述](#概述)
@@ -46,7 +46,7 @@ python basics.py
             @retval 0 初始化成功
             @retval 1 初始化失败
         '''
-    
+
     def config_work_mode(self, mode):
         '''!
             @fn config_work_mode
@@ -54,16 +54,16 @@ python basics.py
             @param mode 模式选择
             @return 返回初始化状态
             @retval 0 模式配置成功
-            @retval 1 模式配置失败 
+            @retval 1 模式配置失败
         '''
-    
+
     def get_workmode(self):
         '''!
             @fn get_workmode
             @brief 获取工作模式
             @return 返回工作模式
         '''
-    
+
     def config_LED_light(self,led,sta):
         '''!
             @fn config_LED_light
@@ -74,7 +74,7 @@ python basics.py
             @retval 0 配置成功
             @retval 1 配置失败
         '''
-    
+
     def get_LED_light_state(self,led):
         '''!
             @fn get_LED_light_state
@@ -84,7 +84,7 @@ python basics.py
             @retval 0 灯关闭
             @retval 1 灯打开
         '''
-    
+
     def sensor_ret(self):
         '''!
             @fn sensor_ret
@@ -142,7 +142,7 @@ python basics.py
             @param data 配置数据
             @return 返回设置状态
         '''
-    
+
     def dm_install_angle(self,x,y,z):
         '''!
             @fn dm_install_angle
@@ -160,7 +160,7 @@ python basics.py
             @param y y 角度
             @param z z 角度
         '''
-    
+
     def dm_install_height(self,he):
         '''!
             @fn dm_install_height
@@ -174,14 +174,14 @@ python basics.py
             @brief 获取安装高度
             @return 返回获取的安装高度
         '''
-    
+
     def dm_auto_measure_height(self):
         '''!
             @fn autoMeasureHeight
             @brief 获取自动测高数据
             @return 返回自动测高数据
         '''
-    
+
     def dm_humanData(self, dh):
         '''!
             @fn dmHumanData
@@ -195,7 +195,7 @@ python basics.py
             @param x x 坐标
             @param y y 坐标
         '''
-    
+
     def track_frequency(self):
         '''!
             @fn trackFrequency
@@ -215,28 +215,28 @@ python basics.py
             @param dm 数据选择
             @return 返回获取的数据
         '''
-    
+
     def get_fall_time(self):
         '''!
             @fn getFallTime
             @brief 获取跌倒时长
             @return 返回跌倒时长
         '''
-    
+
     def static_residency_time(self):
         '''!
             @fn staticResidencyTime
             @brief 驻留时长查询
             @return 返回驻留时长
         '''
-        
+
     def accumulated_height_duration(self):
         '''!
             @fn accumulatedHeightDuration
             @brief 高度累计时间查询
             @return 返回高度累计时间数据
         '''
-    
+
     def dm_human_config(self,con,data):
         '''!
             @fn dmHumanConfig
@@ -257,7 +257,7 @@ python basics.py
             @retval 0 成功
             @retval 1 失败
         '''
-    
+
     def dm_fall_config(self,con,data):
         '''!
             @fn dmFallConfig

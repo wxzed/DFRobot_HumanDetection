@@ -113,4 +113,3 @@ eFallSensitivityC	LITERAL1
 eResidenceSwitchC	LITERAL1
 eMotionHorizontalDistance	LITERAL1
 eResidenceTime	LITERAL1
-

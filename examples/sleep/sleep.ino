@@ -1,7 +1,7 @@
 /**！
  * @file sleep.ino
  * @brief This is an example of sleep detection using human millimeter wave radar.
- * 
+ *
  * ---------------------------------------------------------------------------------------------------
  *    board   |             MCU                | Leonardo/Mega2560/M0 | ESP32 |
  *     VCC    |            3.3V/5V             |        VCC           |  VCC  |
@@ -9,7 +9,7 @@
  *     RX     |              TX                |     Serial1 TX1      |  D2   |
  *     TX     |              RX                |     Serial1 RX1      |  D3   |
  * ---------------------------------------------------------------------------------------------------
- * 
+ *
  * @copyright  Copyright (c) 2010 DFRobot Co.Ltd (http://www.dfrobot.com)
  * @license     The MIT License (MIT)
  * @author [tangjie](jie.tang@dfrobot.com)
@@ -20,19 +20,17 @@
 
 #include "DFRobot_HumanDetection.h"
 
-
-
 DFRobot_HumanDetection hu(&Serial1);
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
 
-  
-  #if defined(ESP32)
+#if defined(ESP32)
   Serial1.begin(115200, SERIAL_8N1, /*rx =*/D3, /*tx =*/D2);
-  #else
+#else
   Serial1.begin(115200);
-  #endif
+#endif
 
   Serial.println("Start initialization");
   while (hu.begin() != 0) {
@@ -60,8 +58,8 @@ void setup() {
       Serial.println("Read error");
   }
 
-  hu.configLEDLight(hu.eHPLed, 1);  // Set HP LED switch
-  hu.sensorRet();                   // Module reset, must perform sensorRet after setting data, otherwise the sensor may not be usable
+  hu.configLEDLight(hu.eHPLed, 1);    // Set HP LED switch
+  hu.sensorRet();                     // Module reset, must perform sensorRet after setting data, otherwise the sensor may not be usable
 
   Serial.print("HP LED status:");
   switch (hu.getLEDLightState(hu.eHPLed)) {
@@ -79,7 +77,8 @@ void setup() {
   Serial.println();
 }
 
-void loop() {
+void loop()
+{
   Serial.print("Bed entry status:");
   switch (hu.smSleepData(hu.eInOrNotInBed)) {
     case 0:
@@ -114,7 +113,7 @@ void loop() {
   Serial.print("Deep sleep duration: ");
   Serial.println(hu.smSleepData(hu.eDeepSleepDuration));
   Serial.print("Sleep quality score: ");
-  Serial.println( hu.smSleepData(hu.eSleepQuality));
+  Serial.println(hu.smSleepData(hu.eSleepQuality));
 
   sSleepComposite comprehensiveState = hu.getSleepComposite();
   Serial.println("Comprehensive sleep status:{");
@@ -181,7 +180,7 @@ void loop() {
       Serial.println("Read error");
   }
 
-  sSleepStatistics statistics = hu.getSleepStatistics();  // Get sleep statistics, the sensor reports the whole night's sleep statistics data when it judges the sleep process to be over.
+  sSleepStatistics statistics = hu.getSleepStatistics();    // Get sleep statistics, the sensor reports the whole night's sleep statistics data when it judges the sleep process to be over.
   Serial.println("Sleep statistics:{");
   Serial.print("\tSleep quality score: ");
   Serial.println(statistics.sleepQualityScore);

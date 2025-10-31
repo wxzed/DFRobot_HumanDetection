@@ -3,7 +3,7 @@ DFRobot_HumanDetection
 
 * [中文版本](./README_CN.md)
 
-This is a millimeter-wave human detection driver library that can detect breathing, sleep, and fall detection functions. 
+This is a millimeter-wave human detection driver library that can detect breathing, sleep, and fall detection functions.
 The breathing sleep function is based on millimeter-wave radar system to realize human biological presence and human movement perception. It continuously records human presence, and based on changes in body movement amplitude and respiratory heart rate during sleep, it makes real-time judgments on the target's sleep state, respiratory and heart rate frequency. After a period of sleep, it outputs a sleep score, which can be used in health and wellness applications combined with the output of relevant sleep parameters.
 The fall detection function is based on personnel posture parameter characteristics to make algorithm judgments, measuring the target person's fall state through changes in speed, distance, and posture. It continuously records whether the target is at risk of falling, and responds with a stillness alarm for long periods of abnormal inactivity.
 
@@ -46,7 +46,7 @@ python basics.py
             @retval 0 Initialization successful
             @retval 1 Initialization failed
         '''
-    
+
     def config_work_mode(self, mode):
         '''!
             @fn config_work_mode
@@ -56,14 +56,14 @@ python basics.py
             @retval 0 Mode configuration successful
             @retval 1 Mode configuration failed
         '''
-    
+
     def get_workmode(self):
         '''!
             @fn get_workmode
             @brief Get work mode
             @return Current work mode
         '''
-    
+
     def config_LED_light(self, led, sta):
         '''!
             @fn config_LED_light
@@ -74,7 +74,7 @@ python basics.py
             @retval 0 Configuration successful
             @retval 1 Configuration failed
         '''
-    
+
     def get_LED_light_state(self, led):
         '''!
             @fn get_LED_light_state
@@ -84,7 +84,7 @@ python basics.py
             @retval 0 Light off
             @retval 1 Light on
         '''
-    
+
     def sensor_ret(self):
         '''!
             @fn sensor_ret
@@ -142,7 +142,7 @@ python basics.py
             @param data Configuration data
             @return Setting status
         '''
-    
+
     def dm_install_angle(self, x, y, z):
         '''!
             @fn dm_install_angle
@@ -158,7 +158,7 @@ python basics.py
             @brief Get radar installation angle
             @return Radar installation angles
         '''
-    
+
     def dm_install_height(self, he):
         '''!
             @fn dm_install_height
@@ -172,14 +172,14 @@ python basics.py
             @brief Get installation height
             @return Installation height
         '''
-    
+
     def dm_auto_measure_height(self):
         '''!
             @fn autoMeasureHeight
             @brief Get auto height measurement data
             @return Auto height measurement data
         '''
-    
+
     def dm_humanData(self, dh):
         '''!
             @fn dmHumanData
@@ -194,14 +194,14 @@ python basics.py
             @param x X coordinate
             @param y Y coordinate
         '''
-    
+
     def track_frequency(self):
         '''!
             @fn trackFrequency
             @brief Get track point reporting frequency
             @return Reporting frequency
         '''
-    
+
     def unmannedTime(self):
         '''!
             @fn unmannedTime
@@ -215,28 +215,28 @@ python basics.py
             @param dm Data selection
             @return Retrieved data
         '''
-    
+
     def get_fall_time(self):
         '''!
             @fn getFallTime
             @brief Get fall duration
             @return Fall duration
         '''
-    
+
     def static_residency_time(self):
         '''!
             @fn staticResidencyTime
             @brief Query residency time
             @return Residency time
         '''
-        
+
     def accumulated_height_duration(self):
         '''!
             @fn accumulatedHeightDuration
             @brief Query accumulated height duration
             @return Accumulated height duration data
         '''
-    
+
     def dm_human_config(self, con, data):
         '''!
             @fn dmHumanConfig
@@ -257,7 +257,7 @@ python basics.py
             @retval 0 Successful
             @retval 1 Failed
         '''
-    
+
     def dm_fall_config(self, con, data):
         '''!
             @fn dmFallConfig
